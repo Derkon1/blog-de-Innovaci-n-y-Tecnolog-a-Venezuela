@@ -1,0 +1,611 @@
+:root {
+    --primary: #00f2ff;
+    --secondary: #7000ff;
+    --bg-dark: #0a0a0a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-muted: #b3b3b3;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Background Animation */
+.background-globes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.globe {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: float 10s infinite alternate;
+}
+
+.globe-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary);
+    top: -100px;
+    left: -100px;
+}
+
+.globe-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--secondary);
+    bottom: -150px;
+    right: -150px;
+    animation-delay: -5s;
+}
+
+.globe-3 {
+    width: 300px;
+    height: 300px;
+    background: #ff0055;
+    top: 40%;
+    left: 40%;
+    opacity: 0.2;
+    animation-duration: 15s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(30px, 50px);
+    }
+}
+
+/* Glassmorphism Utilities */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+}
+
+.glass-border {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    top: 20px;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(90deg, var(--secondary), #5a00d1);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(112, 0, 255, 0.4);
+}
+
+/* Section Common */
+.section-container {
+    padding: 6rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+}
+
+/* Cards Grid (Gobierno) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-link::after {
+    content: '→';
+}
+
+/* Accordion (LOCTI) */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accordion-item {
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-family: var(--font-heading);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 300px;
+    /* Approximate max height */
+    padding: 1.5rem;
+}
+
+.comment-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(112, 0, 255, 0.1);
+    border-left: 3px solid var(--secondary);
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+/* Feature Split (Etica) */
+.feature-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.feature-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.feature-list ion-icon {
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+.feature-visual {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Simple AI Node Animation */
+.ai-animation {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.node {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--text-main);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.node:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pulseNode 2s infinite;
+}
+
+.node:nth-child(2) {
+    bottom: 0;
+    left: 0;
+    animation: pulseNode 2s infinite 0.5s;
+}
+
+.node:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    animation: pulseNode 2s infinite 1s;
+}
+
+@keyframes pulseNode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* TIC Grid */
+.tic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tic-item {
+    padding: 2rem;
+    text-align: center;
+}
+
+.tic-item h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Mixed Grid (Cartelera & Sitios) */
+.mixed-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.cartelera,
+.sitios {
+    padding: 2rem;
+}
+
+.cartelera h3,
+.sitios h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+.news-item {
+    margin-bottom: 1.5rem;
+}
+
+.news-item .date {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.news-item h4 {
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
+}
+
+.link-list {
+    list-style: none;
+}
+
+.link-list li {
+    margin-bottom: 1rem;
+}
+
+.link-list a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.2s;
+    display: block;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+}
+
+.link-list a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding-left: 1rem;
+}
+
+/* Footer / Team */
+.footer-top {
+    border-top: 1px solid var(--glass-border);
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.member {
+    text-align: center;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--secondary), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 0.5rem;
+    color: #000;
+}
+
+.avatar ion-icon {
+    font-size: 1.8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* TIC Specifics */
+.tic-intro {
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tic-intro h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tic-intro ion-icon {
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+.tic-item ion-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        background: rgba(10, 10, 10, 0.9);
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #0a0a0a;
+        padding: 2rem;
+        text-align: center;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .feature-split,
+    .mixed-grid,
+    .tic-grid {
+        grid-template-columns: 1fr;
+    }
+}

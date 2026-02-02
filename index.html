@@ -12,6 +12,7 @@
         rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" type="image/webp" href="/IMAGENES/las-Tic4-1024x819.webp">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,6 +24,13 @@
     </div>
 
     <nav class="navbar glass">
+        <div class="titulo">
+            <img class="logo1" src="/IMAGENES/logo1.png" alt="Logo">
+            <div class="titulo-text">
+                <p class="uptait-text">UPTAIT</p>
+                <p class="subtitulo">Universidad Politécnica Territorial Agroindustrial del Estado Táchira</p>
+            </div>
+        </div>
         <div class="logo">VENEZUELA<span>DIGITAL</span></div>
         <ul class="nav-links">
             <li><a href="#gobierno">Gobierno-E</a></li>
@@ -37,6 +45,7 @@
     </nav>
 
     <header class="hero">
+
         <div class="hero-content">
             <h1 class="animate-text">El Futuro Digital de <br><span class="gradient-text">Venezuela</span></h1>
             <p>Explorando el Gobierno Electrónico, Leyes de Innovación y la Ética en la Inteligencia Artificial.</p>
@@ -92,11 +101,7 @@
                     <div class="accordion-content">
                         <p><strong>Texto Legal:</strong> Tiene por objeto dirigir la generación de una ciencia,
                             tecnología, innovación y sus aplicaciones...</p>
-                        <div class="comment-box">
-                            <strong><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Comentario:</strong>
-                            Establece la base para que el Estado invierta y organice el desarrollo tecnológico como
-                            pilar de la soberanía nacional.
-                        </div>
+
                     </div>
                 </div>
 
@@ -108,11 +113,6 @@
                     <div class="accordion-content">
                         <p><strong>Texto Legal:</strong> Las actividades de ciencia, tecnología, innovación y sus
                             aplicaciones son de interés público...</p>
-                        <div class="comment-box">
-                            <strong><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Comentario:</strong>
-                            Declara la ciencia como "interés público", obligando al Estado a garantizar recursos y
-                            protección para estas actividades.
-                        </div>
                     </div>
                 </div>
 
@@ -124,11 +124,6 @@
                     <div class="accordion-content">
                         <p><strong>Texto Legal:</strong> El Plan Nacional de Ciencia, Tecnología e Innovación definirá
                             los objetivos estratégicos...</p>
-                        <div class="comment-box">
-                            <strong><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Comentario:</strong>
-                            Es la hoja de ruta que alinea la investigación científica con las necesidades reales del
-                            país (salud, energía, alimentos).
-                        </div>
                     </div>
                 </div>
 
@@ -140,11 +135,6 @@
                     <div class="accordion-content">
                         <p><strong>Texto Legal:</strong> Las grandes empresas aportarán anualmente un porcentaje de sus
                             ingresos brutos...</p>
-                        <div class="comment-box">
-                            <strong><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Comentario:</strong>
-                            Este es el mecanismo de financiamiento clave, obligando al sector privado a reinvertir en el
-                            ecosistema de innovación nacional.
-                        </div>
                     </div>
                 </div>
 
@@ -156,11 +146,6 @@
                     <div class="accordion-content">
                         <p><strong>Texto Legal:</strong> Quienes realicen actividades de investigación deben regirse por
                             principios éticos...</p>
-                        <div class="comment-box">
-                            <strong><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Comentario:</strong>
-                            Crucial para el desarrollo tecnológico responsable, asegurando que la innovación no atente
-                            contra la vida o el ambiente.
-                        </div>
                     </div>
                 </div>
             </div>
@@ -272,6 +257,24 @@
                         <li><a href="#">CENDITEL</a></li>
                         <li><a href="#">IVIC</a></li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Comentarios -->
+        <section id="comentarios" class="section-container">
+            <h2 class="section-title">Comentarios</h2>
+            <div class="glass comment-box">
+                <div class="input-group">
+                    <input type="text" id="commentInput" placeholder="Escribe tu comentario..." class="comment-input"
+                        disabled>
+                    <button id="commentBtn" class="btn-primary">Iniciar Sesión</button>
+                </div>
+            </div>
+
+            <div class="comments-container">
+                <div id="commentsList" class="comments-list">
+                    <!-- Los comentarios se cargarán aquí -->
                 </div>
             </div>
         </section>

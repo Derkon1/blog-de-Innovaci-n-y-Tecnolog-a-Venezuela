@@ -69,3 +69,131 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 });
+
+
+const div = document.createElement('div');
+div.id = 'commentSection';
+div.classList.add('comment-section');
+div.innerHTML = `
+    <h2>Comentarios</h2>
+    <form id="commentForm">
+        <input type="email" id="email" placeholder="Correo Electronico" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Ingresar Sesión</button>
+    </form>
+    <div id="comments"></div>
+`;
+document.body.appendChild(div);
+
+
+
+// DOM Elements
+const button = document.getElementById('commentBtn');
+const commentInput = document.getElementById('commentInput');
+const commentsList = document.getElementById('commentsList');
+const commentSection = document.getElementById('commentSection');
+const commentForm = document.getElementById('commentForm');
+const emailInput = document.getElementById('email');
+
+// State
+let isLoggedIn = false;
+let userEmail = sessionStorage.getItem('blogUserEmail') || '';
+let comments = JSON.parse(localStorage.getItem('blogComments')) || [];
+let visibleComments = 5;
+
+// Init
+function init() {
+    if (userEmail) {
+        isLoggedIn = true;
+        updateUIState();
+    }
+    renderComments();
+}
+
+// Update UI based on login state
+function updateUIState() {
+    if (isLoggedIn) {
+        button.textContent = 'Comentar';
+        commentInput.disabled = false;
+        commentInput.placeholder = `Comenta como ${userEmail}...`;
+    } else {
+        button.textContent = 'Iniciar Sesión';
+        commentInput.disabled = true;
+        commentInput.placeholder = 'Escribe tu comentario...';
+    }
+}
+
+// Render Comments
+function renderComments() {
+    commentsList.innerHTML = '';
+    const reversedComments = comments.slice().reverse();
+    const toShow = reversedComments.slice(0, visibleComments);
+
+    toShow.forEach(comment => {
+        const div = document.createElement('div');
+        div.className = 'comment-item glass-dark';
+        div.innerHTML = `
+            <div class="comment-header">
+                <span class="comment-author">${comment.email}</span>
+                <span class="comment-date">${new Date(comment.date).toLocaleDateString()}</span>
+            </div>
+            <p class="comment-body">${comment.text}</p>
+        `;
+        commentsList.appendChild(div);
+    });
+
+    // Load More Button
+    if (visibleComments < comments.length) {
+        const loadMoreBtn = document.createElement('button');
+        loadMoreBtn.className = 'btn-secondary load-more-btn';
+        loadMoreBtn.textContent = 'Ver más comentarios';
+        loadMoreBtn.onclick = () => {
+            visibleComments += 5;
+            renderComments();
+        };
+        commentsList.appendChild(loadMoreBtn);
+    }
+}
+
+// Main Button Handler
+button.addEventListener('click', () => {
+    if (!isLoggedIn) {
+        commentSection.style.display = 'block';
+    } else {
+        const text = commentInput.value.trim();
+        if (text) {
+            const newComment = {
+                email: userEmail,
+                text: text,
+                date: new Date().toISOString()
+            };
+            comments.push(newComment);
+            localStorage.setItem('blogComments', JSON.stringify(comments));
+
+            commentInput.value = '';
+            visibleComments = 5; // Reset view to top
+            renderComments();
+        } else {
+            alert('Por favor escribe un comentario.');
+        }
+    }
+});
+
+// Login Form Submit
+commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+
+    if (email) {
+        isLoggedIn = true;
+        userEmail = email;
+        sessionStorage.setItem('blogUserEmail', email);
+
+        commentSection.style.display = 'none';
+        updateUIState();
+        commentInput.focus();
+    }
+});
+
+// Run Init
+init();

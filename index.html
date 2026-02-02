@@ -4,7 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovación y Tecnología Venezuela</title>
+    <title>Innovación y Tecnología Venezuela | Blog de la UPTAIT</title>
+    <meta name="description"
+        content="Explora el futuro digital de Venezuela: Gobierno electrónico, LOCTI, ética en IA y políticas TIC. Un espacio de aprendizaje de la Universidad Politécnica Territorial Agroindustrial del Estado Táchira.">
+    <meta name="keywords"
+        content="Venezuela, Tecnología, Innovación, Gobierno Electrónico, LOCTI, Ética IA, TIC, UPTAIT, Táchira">
+    <meta name="author" content="Anderson Daniel Noguera Flores, Diego Alejandro Garcia Parra">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-dominio.com/">
+    <meta property="og:title" content="Innovación y Tecnología Venezuela | Blog de la UPTAIT">
+    <meta property="og:description"
+        content="Explora el futuro digital de Venezuela: Gobierno electrónico, LOCTI, ética en IA y políticas TIC.">
+    <meta property="og:image" content="https://tu-dominio.com/Imagenes/las-Tic4-1024x819.webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tu-dominio.com/">
+    <meta property="twitter:title" content="Innovación y Tecnología Venezuela | Blog de la UPTAIT">
+    <meta property="twitter:description"
+        content="Explora el futuro digital de Venezuela: Gobierno electrónico, LOCTI, ética en IA y políticas TIC.">
+    <meta property="twitter:image" content="https://tu-dominio.com/Imagenes/las-Tic4-1024x819.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Innovación y Tecnología Venezuela",
+      "url": "https://tu-dominio.com/",
+      "description": "Explora el futuro digital de Venezuela: Gobierno electrónico, LOCTI, ética en IA y políticas TIC.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "UPTAIT"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,15 +59,15 @@
 
     <nav class="navbar glass">
         <div class="titulo">
-            <img class="logo1" src="Imagenes/logo1.png" alt="Logo">
+            <img class="logo1" src="Imagenes/logo1.png"
+                alt="Logo de UPTAIT - Universidad Politécnica Territorial Agroindustrial">
             <div class="titulo-text">
                 <p class="uptait-text">UPTAIT</p>
                 <p class="subtitulo">Universidad Politécnica Territorial Agroindustrial del Estado Táchira</p>
             </div>
         </div>
-        <div class="logo">VENEZUELA<span>DIGITAL</span></div>
         <ul class="nav-links">
-            <li><a href="#gobierno">Gobierno-E</a></li>
+            <li><a href="#gobierno">Gobierno</a></li>
             <li><a href="#locti">LOCTI</a></li>
             <li><a href="#etica">Ética IA</a></li>
             <li><a href="#tic">Políticas TIC</a></li>
@@ -44,8 +78,8 @@
         </div>
     </nav>
 
-    <header class="hero">
-
+    <header class="hero" id="home">
+        <canvas id="heroCanvas"></canvas>
         <div class="hero-content">
             <h1 class="animate-text">El Futuro Digital de <br><span class="gradient-text">Venezuela</span></h1>
             <p>Explorando el Gobierno Electrónico, Leyes de Innovación y la Ética en la Inteligencia Artificial.</p>
@@ -54,40 +88,56 @@
     </header>
 
     <main>
-        <!-- Sección 1: Gobierno Electrónico -->
         <section id="gobierno" class="section-container">
             <h2 class="section-title">Gobierno Electrónico</h2>
             <p class="section-desc">Digitalización de los servicios públicos para el ciudadano.</p>
 
             <div class="cards-grid">
                 <div class="card glass">
-                    <div class="icon-box"><ion-icon name="id-card-outline"></ion-icon></div>
-                    <h3>SAIME</h3>
-                    <p>Gestión de identidad, pasaportes y cedulación electrónica.</p>
-                    <a href="http://www.saime.gob.ve" target="_blank" class="card-link">Visitar Portal</a>
+                    <img src="Imagenes/img2.jpg" alt="SAIME Portal Image" class="img-specific-size">
+                    <div class="card-info">
+                        <div class="icon-box"><ion-icon name="id-card-outline"></ion-icon></div>
+                        <h3>SAIME</h3>
+                        <p>Gestión de identidad, pasaportes y cedulación electrónica.</p>
+                        <a href="http://www.saime.gob.ve" target="_blank" rel="noopener noreferrer"
+                            class="card-link">Visitar Portal</a>
+                    </div>
                 </div>
                 <div class="card glass">
-                    <div class="icon-box"><ion-icon name="wallet-outline"></ion-icon></div>
-                    <h3>SENIAT</h3>
-                    <p>Declaración y pago de impuestos sobre la renta y aduanas.</p>
-                    <a href="http://www.seniat.gob.ve" target="_blank" class="card-link">Visitar Portal</a>
+                    <img src="Imagenes/img1.jpg" alt="SENIAT Portal Image">
+                    <div class="card-info">
+                        <div class="icon-box"><ion-icon name="wallet-outline"></ion-icon></div>
+                        <h3>SENIAT</h3>
+                        <p>Declaración y pago de impuestos sobre la renta y aduanas.</p>
+                        <a href="http://www.seniat.gob.ve" target="_blank" rel="noopener noreferrer"
+                            class="card-link">Visitar Portal</a>
+                    </div>
                 </div>
                 <div class="card glass">
-                    <div class="icon-box"><ion-icon name="school-outline"></ion-icon></div>
-                    <h3>MPPE</h3>
-                    <p>Gestión educativa, títulos y certificados en línea.</p>
-                    <a href="http://www.mppe.gob.ve" target="_blank" class="card-link">Visitar Portal</a>
+                    <img src="Imagenes/img4.jpg" alt="MPPE Portal Image">
+                    <div class="card-info">
+                        <div class="icon-box"><ion-icon name="school-outline"></ion-icon></div>
+                        <h3>MPPE</h3>
+                        <p>Gestión educativa, títulos y certificados en línea.</p>
+                        <a href="http://www.mppe.gob.ve" target="_blank" rel="noopener noreferrer"
+                            class="card-link">Visitar
+                            Portal</a>
+                    </div>
                 </div>
                 <div class="card glass">
-                    <div class="icon-box"><ion-icon name="car-outline"></ion-icon></div>
-                    <h3>INTT</h3>
-                    <p>Trámites vehiculares, licencias y registros de transporte.</p>
-                    <a href="http://www.intt.gob.ve" target="_blank" class="card-link">Visitar Portal</a>
+                    <img src="Imagenes/img3.jpg" alt="INTT Portal Image">
+                    <div class="card-info">
+                        <div class="icon-box"><ion-icon name="car-outline"></ion-icon></div>
+                        <h3>INTT</h3>
+                        <p>Trámites vehiculares, licencias y registros de transporte.</p>
+                        <a href="http://www.intt.gob.ve" target="_blank" rel="noopener noreferrer"
+                            class="card-link">Visitar
+                            Portal</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 2: LOCTI -->
         <section id="locti" class="section-container alternate-bg">
             <h2 class="section-title">LOCTI</h2>
             <p class="section-desc">Ley Orgánica de Ciencia, Tecnología e Innovación - Artículos Clave</p>
@@ -151,7 +201,6 @@
             </div>
         </section>
 
-        <!-- Sección 3: Ética en IA -->
         <section id="etica" class="section-container">
             <div class="feature-split">
                 <div class="feature-text">
@@ -167,17 +216,11 @@
                     </ul>
                 </div>
                 <div class="feature-visual glass">
-                    <div class="ai-animation">
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="connection"></div>
-                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Sección 4: Política TIC -->
         <section id="tic" class="section-container">
             <h2 class="section-title">Política de TIC</h2>
             <p class="section-desc">Tecnologías de Información y Comunicación: Conceptualización y Estrategia Nacional.
@@ -224,11 +267,10 @@
             </div>
         </section>
 
-        <!-- Sección 5: Cartelera Digital y Sitios de Interés -->
         <section id="cartelera" class="section-container">
             <div class="mixed-grid">
                 <div class="cartelera glass-border">
-                    <h3><ion-icon name="newspaper-outline"></ion-icon> Cartelera Digital</h3>
+                    <h3><ion-icon name="newspaper-outline"></ion-icon> Cartelera </h3>
                     <div class="news-feed">
                         <article class="news-item">
                             <span class="date">Hoy</span>
@@ -249,19 +291,11 @@
                 </div>
 
                 <div class="sitios glass-border">
-                    <h3><ion-icon name="link-outline"></ion-icon> Sitios de Interés</h3>
-                    <ul class="link-list">
-                        <li><a href="#">Ministerio de Ciencia y Tecnología</a></li>
-                        <li><a href="#">Observatorio Nacional de CTI</a></li>
-                        <li><a href="#">Portal de Gobierno en Línea</a></li>
-                        <li><a href="#">CENDITEL</a></li>
-                        <li><a href="#">IVIC</a></li>
-                    </ul>
+
                 </div>
             </div>
         </section>
 
-        <!-- Sección Comentarios -->
         <section id="comentarios" class="section-container">
             <h2 class="section-title">Comentarios</h2>
             <div class="glass comment-box">
@@ -274,21 +308,21 @@
 
             <div class="comments-container">
                 <div id="commentsList" class="comments-list">
-                    <!-- Los comentarios se cargarán aquí -->
                 </div>
             </div>
         </section>
 
-        <!-- Sección Integrantes -->
         <section id="equipo" class="section-container footer-top">
             <h2 class="section-title small">Equipo de Desarrollo</h2>
             <div class="team-grid">
                 <div class="member">
-                    <div class="avatar"><ion-icon name="person-outline"></ion-icon></div>
+                    <div class="avatar"><img src="Imagenes/WhatsApp Image 2026-02-02 at 5.55.14 PM.jpeg"
+                            alt="Anderson Daniel Noguera Flores - Desarrollador"></div>
                     <p>Anderson Daniel Noguera Flores </p>
                 </div>
                 <div class="member">
-                    <div class="avatar"><ion-icon name="person-outline"></ion-icon></div>
+                    <div class="avatar"><img src="Imagenes/WhatsApp Image 2026-02-02 at 5.21.34 PM.jpeg"
+                            alt="Diego Alejandro Garcia Parra - Desarrollador"></div>
                     <p>Diego Alejandro Garcia Parra</p>
                 </div>
             </div>

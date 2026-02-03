@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const imageData = tempCtx.getImageData(0, 0, canvas.width, canvas.height).data;
             particles = [];
 
-            const step = 4;
+            // Optimized step size: lower value = more detail (visibility), higher = more performance
+            const step = canvas.width < 768 ? 7 : 6;
             for (let y = 0; y < canvas.height; y += step) {
                 for (let x = 0; x < canvas.width; x += step) {
                     const index = (y * canvas.width + x) * 4;
@@ -61,8 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollPct = Math.min(scrollPos / (window.innerHeight * 0.6), 1.5);
         });
 
+        let resizeTimeout;
         window.addEventListener('resize', () => {
-            initParticles();
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(initParticles, 250);
         });
 
         function animate() {
@@ -98,7 +101,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.setAttribute('name', 'grid-outline');
             }
         });
+
+        // Close menu when a link is clicked
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('ion-icon');
+                icon.setAttribute('name', 'grid-outline');
+            });
+        });
     }
+
+    // Navbar scrolled effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 
     const accordions = document.querySelectorAll('.accordion-item');
 
@@ -135,15 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
-
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    `;
-    document.head.appendChild(style);
 });
 
 const div = document.createElement('div');

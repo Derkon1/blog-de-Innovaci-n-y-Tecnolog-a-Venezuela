@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ctx = canvas.getContext('2d', { willReadFrequently: true });
         let particles = [];
         const image = new Image();
-        image.src = 'Imagenes/hero-bg.jpg';
+        image.src = 'IMÀGENES/hero-bg.jpg'; // Ruta corregida
 
         image.onload = () => {
             initParticles();

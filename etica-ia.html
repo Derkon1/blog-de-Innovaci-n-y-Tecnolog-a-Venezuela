@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ética en Inteligencia Artificial | UPTAIT</title>
+    <meta name="description"
+        content="Ética en el desarrollo y uso de Inteligencia Artificial: Prevención de sesgos, explicabilidad, privacidad, rendición de cuentas y responsabilidad social.">
+    <meta name="keywords"
+        content="Ética IA, Inteligencia Artificial, Sesgos, Privacidad, Explicabilidad, Responsabilidad">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" type="image/webp" href="IMÀGENES/las-Tic4-1024x819.webp">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="enhancements.css">
+</head>
+
+<body>
+
+    <nav class="navbar glass navbar-secondary">
+        <div class="titulo">
+            <img class="logo1" src="IMÀGENES/logo1.png"
+                alt="Logo de UPTAIT - Universidad Politécnica Territorial Agroindustrial">
+            <div class="titulo-text">
+                <p class="uptait-text">UPTAIT</p>
+                <p class="subtitulo">Universidad Politécnica Territorial Agroindustrial del Estado Táchira</p>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <ion-icon name="grid-outline"></ion-icon>
+        </div>
+    </nav>
+
+    <header class="hero"
+        style="height: 25vh; min-height: 180px; background: #ffffff; border-bottom: 1px solid rgba(0,0,0,0.06); box-shadow: 0 2px 15px rgba(0,0,0,0.03);">
+    </header>
+
+    <main>
+        <!-- Introducción -->
+        <section class="section-container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 class="section-title">¿Por qué es importante la Ética en IA?</h2>
+
+                <div class="glass-dark" style="padding: 2.5rem; margin-bottom: 3rem; border-radius: 16px;">
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        La <strong>ética en Inteligencia Artificial</strong> no es solo una cuestión de "ser buenos",
+                        sino de <strong>supervivencia social y seguridad</strong>. Como la IA no tiene conciencia ni
+                        valores propios,
+                        si no le inyectamos ética, simplemente se convierte en un <strong>amplificador gigante de
+                            nuestros peores errores</strong>.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        La IA puede perpetuar discriminación, violar privacidad, manipular opiniones y tomar decisiones
+                        que afectan vidas humanas.
+                        Por eso, establecer principios éticos desde el diseño hasta el uso es fundamental para
+                        garantizar que la tecnología
+                        sirva al bien común.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        La ética en IA se divide en dos grandes áreas: <strong>Ética en el Desarrollo</strong> (cómo se
+                        construye la IA)
+                        y <strong>Ética en el Uso</strong> (cómo se implementa y utiliza).
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <div
+                        style="display: inline-flex; align-items: center; justify-content: center; width: 140px; height: 140px; background: var(--gradient-3); border-radius: 50%; box-shadow: 0 15px 40px rgba(6, 182, 212, 0.3);">
+                        <ion-icon name="shield-checkmark" style="font-size: 5rem; color: white;"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ética en el Desarrollo -->
+        <section class="section-container alternate-bg">
+            <h2 class="section-title">Ética en el Desarrollo de IA</h2>
+            <p class="section-desc">Las 3 Reglas de Oro para construir IA responsable</p>
+
+            <div class="tic-grid">
+                <div class="tic-item glass-dark" style="grid-column: span 2;">
+                    <ion-icon name="warning-outline" style="color: var(--accent);"></ion-icon>
+                    <h3>1. Prevención de Sesgos</h3>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>El Problema:</strong> Si entrenas una IA con datos históricos de contratación de una
+                        empresa que
+                        siempre ha contratado más hombres que mujeres, la IA aprenderá a discriminar contra las mujeres.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>La Solución:</strong> Los desarrolladores deben auditar los datos de entrenamiento para
+                        detectar
+                        y corregir sesgos antes de que la IA los aprenda. Esto incluye balancear datasets, eliminar
+                        variables
+                        discriminatorias y validar resultados con grupos diversos.
+                    </p>
+                    <p>
+                        <strong>Ejemplo Real:</strong> Amazon tuvo que descartar su IA de reclutamiento porque
+                        discriminaba contra
+                        mujeres, ya que fue entrenada con CVs históricos mayoritariamente masculinos.
+                    </p>
+                </div>
+
+                <div class="tic-item glass-dark" style="grid-column: span 2;">
+                    <ion-icon name="eye-outline" style="color: var(--primary);"></ion-icon>
+                    <h3>2. Explicabilidad (No Cajas Negras)</h3>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>El Problema:</strong> Muchas IA funcionan como "cajas negras": dan una respuesta, pero
+                        nadie sabe
+                        por qué. Esto es peligroso en áreas críticas como medicina o justicia.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>La Solución:</strong> Los sistemas de IA deben ser diseñados para poder explicar sus
+                        decisiones.
+                        Si una IA niega un crédito bancario, debe poder decir exactamente qué factores influyeron en esa
+                        decisión.
+                    </p>
+                    <p>
+                        <strong>Importancia:</strong> Sin explicabilidad, no hay rendición de cuentas. Si no sabemos por
+                        qué la IA
+                        tomó una decisión, no podemos corregir errores ni garantizar justicia.
+                    </p>
+                </div>
+
+                <div class="tic-item glass-dark" style="grid-column: span 2;">
+                    <ion-icon name="lock-closed-outline" style="color: var(--secondary);"></ion-icon>
+                    <h3>3. Privacidad por Diseño</h3>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>El Problema:</strong> Para que una IA aprenda, necesita datos. Pero esos datos a menudo
+                        contienen
+                        información personal sensible (historial médico, ubicación, preferencias).
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>La Solución:</strong> Los datos personales no deben ser el "alimento gratis" de la IA.
+                        Se deben
+                        usar técnicas como <strong>anonimización</strong>, <strong>encriptación</strong> y
+                        <strong>aprendizaje
+                            federado</strong> para que la máquina aprenda sin ver tus datos reales.
+                    </p>
+                    <p>
+                        <strong>Técnicas:</strong> Differential Privacy (añadir ruido a los datos), Federated Learning
+                        (entrenar
+                        modelos sin centralizar datos), y Homomorphic Encryption (procesar datos encriptados).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ética en el Uso -->
+        <section class="section-container">
+            <h2 class="section-title">Ética en el Uso de IA</h2>
+            <p class="section-desc">Responsabilidad de empresas y usuarios al implementar IA</p>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="glass-dark" style="padding: 2.5rem; margin-bottom: 2rem; border-radius: 16px;">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.5rem;">
+                        <ion-icon name="people-outline"
+                            style="vertical-align: middle; margin-right: 0.5rem;"></ion-icon>
+                        Rendición de Cuentas
+                    </h3>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                        <strong>Principio Fundamental:</strong> Las máquinas no van a la cárcel. Si una IA comete un
+                        error grave,
+                        un humano debe ser legalmente responsable. Nunca se puede culpar al "algoritmo".
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                        <strong>Ejemplo:</strong> Si un coche autónomo atropella a alguien, ¿quién es responsable? ¿El
+                        fabricante?
+                        ¿El programador? ¿El dueño? La ética exige que esto esté claro ANTES de que ocurra el accidente.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8;">
+                        <strong>Implicación:</strong> Las empresas que usan IA deben tener protocolos claros de
+                        responsabilidad
+                        y mecanismos de supervisión humana en decisiones críticas.
+                    </p>
+                </div>
+
+                <div class="glass-dark" style="padding: 2.5rem; margin-bottom: 2rem; border-radius: 16px;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1.5rem; font-size: 1.5rem;">
+                        <ion-icon name="checkmark-circle-outline"
+                            style="vertical-align: middle; margin-right: 0.5rem;"></ion-icon>
+                        Verdad y Autenticidad
+                    </h3>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                        <strong>El Desafío:</strong> Con deepfakes, texto generado por IA y contenido sintético, es cada
+                        vez más
+                        difícil distinguir lo real de lo falso.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                        <strong>Solución Ética:</strong> Todo contenido generado por IA debe estar marcado como tal para
+                        no engañar
+                        a la población ni manipular elecciones. La transparencia es fundamental.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8;">
+                        <strong>Regulación:</strong> Varios países están implementando leyes que obligan a etiquetar
+                        contenido
+                        generado por IA, especialmente en contextos políticos y publicitarios.
+                    </p>
+                </div>
+
+                <div class="glass-dark" style="padding: 2.5rem; border-radius: 16px;">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 1.5rem;">
+                        <ion-icon name="close-circle-outline"
+                            style="vertical-align: middle; margin-right: 0.5rem;"></ion-icon>
+                        No Maleficencia
+                    </h3>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                        <strong>Principio Hipocrático:</strong> "Primero, no hacer daño". La IA nunca debe usarse para
+                        engañar,
+                        acosar o crear armas. Su objetivo principal debe ser el beneficio social y ambiental.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                        <strong>Usos Prohibidos:</strong> Sistemas de vigilancia masiva sin consentimiento, armas
+                        autónomas letales,
+                        manipulación psicológica, discriminación automatizada.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8;">
+                        <strong>Usos Positivos:</strong> Diagnóstico médico, predicción de desastres naturales,
+                        optimización de
+                        recursos, educación personalizada, investigación científica.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Casos de Estudio -->
+        <section class="section-container alternate-bg">
+            <h2 class="section-title">Casos de Estudio: Ética en Acción</h2>
+            <p class="section-desc">Ejemplos reales de dilemas éticos en IA</p>
+
+            <div class="cards-grid">
+                <div class="card glass">
+                    <div style="padding: 2rem; height: 100%;">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <ion-icon name="briefcase-outline"
+                                style="font-size: 3rem; color: var(--primary);"></ion-icon>
+                        </div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Amazon Recruiting AI</h3>
+                        <p style="line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Problema:</strong> Sistema de IA para reclutamiento discriminaba contra mujeres.
+                        </p>
+                        <p style="line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Causa:</strong> Entrenado con CVs históricos mayoritariamente masculinos.
+                        </p>
+                        <p style="line-height: 1.7;">
+                            <strong>Lección:</strong> Los datos históricos pueden perpetuar discriminación. Necesidad de
+                            auditorías de sesgo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card glass">
+                    <div style="padding: 2rem; height: 100%;">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <ion-icon name="scale-outline" style="font-size: 3rem; color: var(--secondary);"></ion-icon>
+                        </div>
+                        <h3 style="color: var(--secondary); margin-bottom: 1rem;">COMPAS (Justicia Penal)</h3>
+                        <p style="line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Problema:</strong> Algoritmo para predecir reincidencia criminal mostraba sesgo
+                            racial.
+                        </p>
+                        <p style="line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Impacto:</strong> Afectaba decisiones de libertad condicional y sentencias.
+                        </p>
+                        <p style="line-height: 1.7;">
+                            <strong>Lección:</strong> La IA en contextos de justicia requiere máxima transparencia y
+                            supervisión humana.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card glass">
+                    <div style="padding: 2rem; height: 100%;">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <ion-icon name="camera-outline" style="font-size: 3rem; color: var(--accent);"></ion-icon>
+                        </div>
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;">Reconocimiento Facial</h3>
+                        <p style="line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Problema:</strong> Sistemas con menor precisión en personas de piel oscura.
+                        </p>
+                        <p style="line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Riesgo:</strong> Identificaciones erróneas en aplicaciones de seguridad.
+                        </p>
+                        <p style="line-height: 1.7;">
+                            <strong>Lección:</strong> Datasets de entrenamiento deben ser diversos y representativos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Blog de Innovación Tecnológica Venezolana.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

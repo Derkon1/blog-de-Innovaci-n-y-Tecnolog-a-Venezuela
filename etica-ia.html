@@ -75,8 +75,9 @@
 
                 <div style="text-align: center; margin: 3rem 0;">
                     <div
-                        style="display: inline-flex; align-items: center; justify-content: center; width: 140px; height: 140px; background: var(--gradient-3); border-radius: 50%; box-shadow: 0 15px 40px rgba(6, 182, 212, 0.3);">
-                        <ion-icon name="shield-checkmark" style="font-size: 5rem; color: white;"></ion-icon>
+                        style="display: inline-flex; align-items: center; justify-content: center; width: 220px; height: 220px; background: var(--gradient-3); border-radius: 50%; box-shadow: 0 15px 40px rgba(6, 182, 212, 0.3); overflow: hidden;">
+                        <img src="IMÀGENES/etica-intro.jpg" alt="Ética en IA"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -155,10 +156,35 @@
             </div>
         </section>
 
+        <!-- Marco Legal y Ético -->
+        <section class="section-container alternate-bg">
+            <h2 class="section-title">Marco Legal Venezolano y Ética</h2>
+            <div class="ethics-intro glass-dark" style="margin-bottom: 2rem;">
+                <p>
+                    Aunque Venezuela no posee una ley exclusiva para IA, el marco legal existente proporciona bases
+                    sólidas para su regulación ética:
+                </p>
+                <ul class="feature-list" style="margin-top: 1rem;">
+                    <li><strong>Constitución de la República (Art. 60):</strong> Protección del honor, vida privada,
+                        intimidad, propia imagen y confidencialidad.</li>
+                    <li><strong>Ley de Infogobierno:</strong> Principios de transparencia, integridad y
+                        seguridad de la información.</li>
+                    <li><strong>Ley Especial contra Delitos Informáticos:</strong> Sanciones contra el acceso
+                        indebido y la violación de privacidad.</li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Ética en el Uso -->
         <section class="section-container">
             <h2 class="section-title">Ética en el Uso de IA</h2>
-            <p class="section-desc">Responsabilidad de empresas y usuarios al implementar IA</p>
+            <p class="section-desc">Responsabilidad al implementar sistemas inteligentes</p>
+
+            <div
+                style="max-width: 800px; margin: 0 auto 3rem auto; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="IMÀGENES/etica-balance.jpg" alt="Equilibrio Ético"
+                    style="width: 100%; height: auto; display: block;">
+            </div>
 
             <div style="max-width: 900px; margin: 0 auto;">
                 <div class="glass-dark" style="padding: 2.5rem; margin-bottom: 2rem; border-radius: 16px;">
@@ -238,61 +264,65 @@
             <p class="section-desc">Ejemplos reales de dilemas éticos en IA</p>
 
             <div class="cards-grid">
-                <div class="card glass">
-                    <div style="padding: 2rem; height: 100%;">
-                        <div style="text-align: center; margin-bottom: 1.5rem;">
-                            <ion-icon name="briefcase-outline"
-                                style="font-size: 3rem; color: var(--primary);"></ion-icon>
+                <div class="card glass" style="height: auto; min-height: 100%; display: flex; flex-direction: column;">
+                    <div style="padding: 0; display: flex; flex-direction: column; height: 100%;">
+                        <img src="IMÀGENES/etica-amazon.jpg" alt="Amazon Recruitment AI Bias"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px 16px 0 0;">
+                        <div style="padding: 1.5rem; flex-grow: 1; color: black;">
+                            <h3 style="color: var(--primary); margin-bottom: 1rem;">Amazon Recruiting AI</h3>
+                            <p style="line-height: 1.7; margin-bottom: 1rem; color: #000;">
+                                <strong>Problema:</strong> Sistema de IA para reclutamiento discriminaba contra mujeres.
+                            </p>
+                            <p style="line-height: 1.7; margin-bottom: 1rem; color: #000;">
+                                <strong>Causa:</strong> Entrenado con CVs históricos mayoritariamente masculinos.
+                            </p>
+                            <p style="line-height: 1.7; color: #000;">
+                                <strong>Lección:</strong> Los datos históricos pueden perpetuar discriminación.
+                                Necesidad de
+                                auditorías de sesgo.
+                            </p>
                         </div>
-                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Amazon Recruiting AI</h3>
-                        <p style="line-height: 1.7; margin-bottom: 1rem;">
-                            <strong>Problema:</strong> Sistema de IA para reclutamiento discriminaba contra mujeres.
-                        </p>
-                        <p style="line-height: 1.7; margin-bottom: 1rem;">
-                            <strong>Causa:</strong> Entrenado con CVs históricos mayoritariamente masculinos.
-                        </p>
-                        <p style="line-height: 1.7;">
-                            <strong>Lección:</strong> Los datos históricos pueden perpetuar discriminación. Necesidad de
-                            auditorías de sesgo.
-                        </p>
                     </div>
                 </div>
 
-                <div class="card glass">
-                    <div style="padding: 2rem; height: 100%;">
-                        <div style="text-align: center; margin-bottom: 1.5rem;">
-                            <ion-icon name="scale-outline" style="font-size: 3rem; color: var(--secondary);"></ion-icon>
+                <div class="card glass" style="height: auto; min-height: 100%; display: flex; flex-direction: column;">
+                    <div style="padding: 0; display: flex; flex-direction: column; height: 100%;">
+                        <img src="IMÀGENES/etica-compas.jpg" alt="COMPAS Algorithmic Bias"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px 16px 0 0;">
+                        <div style="padding: 1.5rem; flex-grow: 1; color: black;">
+                            <h3 style="color: var(--secondary); margin-bottom: 1rem;">COMPAS (Justicia Penal)</h3>
+                            <p style="line-height: 1.7; margin-bottom: 1rem; color: #000;">
+                                <strong>Problema:</strong> Algoritmo para predecir reincidencia criminal mostraba sesgo
+                                racial.
+                            </p>
+                            <p style="line-height: 1.7; margin-bottom: 1rem; color: #000;">
+                                <strong>Impacto:</strong> Afectaba decisiones de libertad condicional y sentencias.
+                            </p>
+                            <p style="line-height: 1.7; color: #000;">
+                                <strong>Lección:</strong> La IA en contextos de justicia requiere máxima transparencia y
+                                supervisión humana.
+                            </p>
                         </div>
-                        <h3 style="color: var(--secondary); margin-bottom: 1rem;">COMPAS (Justicia Penal)</h3>
-                        <p style="line-height: 1.7; margin-bottom: 1rem;">
-                            <strong>Problema:</strong> Algoritmo para predecir reincidencia criminal mostraba sesgo
-                            racial.
-                        </p>
-                        <p style="line-height: 1.7; margin-bottom: 1rem;">
-                            <strong>Impacto:</strong> Afectaba decisiones de libertad condicional y sentencias.
-                        </p>
-                        <p style="line-height: 1.7;">
-                            <strong>Lección:</strong> La IA en contextos de justicia requiere máxima transparencia y
-                            supervisión humana.
-                        </p>
                     </div>
                 </div>
 
-                <div class="card glass">
-                    <div style="padding: 2rem; height: 100%;">
-                        <div style="text-align: center; margin-bottom: 1.5rem;">
-                            <ion-icon name="camera-outline" style="font-size: 3rem; color: var(--accent);"></ion-icon>
+                <div class="card glass" style="height: auto; min-height: 100%; display: flex; flex-direction: column;">
+                    <div style="padding: 0; display: flex; flex-direction: column; height: 100%;">
+                        <img src="IMÀGENES/etica-facial.jpg" alt="Facial Recognition Issues"
+                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px 16px 0 0;">
+                        <div style="padding: 1.5rem; flex-grow: 1; color: black;">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;">Reconocimiento Facial</h3>
+                            <p style="line-height: 1.7; margin-bottom: 1rem; color: #000;">
+                                <strong>Problema:</strong> Sistemas con menor precisión en personas de piel oscura.
+                            </p>
+                            <p style="line-height: 1.7; margin-bottom: 1rem; color: #000;">
+                                <strong>Riesgo:</strong> Identificaciones erróneas en aplicaciones de seguridad.
+                            </p>
+                            <p style="line-height: 1.7; color: #000;">
+                                <strong>Lección:</strong> Datasets de entrenamiento deben ser diversos y
+                                representativos.
+                            </p>
                         </div>
-                        <h3 style="color: var(--accent); margin-bottom: 1rem;">Reconocimiento Facial</h3>
-                        <p style="line-height: 1.7; margin-bottom: 1rem;">
-                            <strong>Problema:</strong> Sistemas con menor precisión en personas de piel oscura.
-                        </p>
-                        <p style="line-height: 1.7; margin-bottom: 1rem;">
-                            <strong>Riesgo:</strong> Identificaciones erróneas en aplicaciones de seguridad.
-                        </p>
-                        <p style="line-height: 1.7;">
-                            <strong>Lección:</strong> Datasets de entrenamiento deben ser diversos y representativos.
-                        </p>
                     </div>
                 </div>
             </div>

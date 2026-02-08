@@ -222,12 +222,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-}
+/* .hero p moved to bottom of file */
 
 .btn-primary {
     display: inline-block;
@@ -290,7 +285,9 @@ body {
     padding: 0;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
-    aspect-ratio: 1/1;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -412,7 +409,8 @@ body {
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 600px;
+    max-height: 2000px;
+    /* Increased from 600px to prevent clipping */
     padding: 2rem 1.5rem;
 }
 
@@ -637,6 +635,32 @@ footer {
 .tic-intro ul {
     text-align: left;
     margin-top: 1.5rem;
+}
+
+.ethics-intro {
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    /* Increased from 1.25rem */
+    color: var(--text-main);
+    /* Made darker for better visibility */
+    max-width: 700px;
+    /* Increased width slightly to accommodate larger text */
+    margin: 0 auto 2.5rem;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    /* Added glow for contrast */
+    font-weight: 500;
 }
 
 .tic-intro ul li {

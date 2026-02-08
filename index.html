@@ -79,6 +79,8 @@
         </div>
     </nav>
 
+
+
     <header class="hero" id="home">
         <canvas id="heroCanvas"></canvas>
         <div class="hero-content">
@@ -144,8 +146,9 @@
 
             <div style="text-align: center; margin-bottom: 3rem;">
                 <div
-                    style="display: inline-flex; align-items: center; justify-content: center; width: 120px; height: 120px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);">
-                    <ion-icon name="bulb" style="font-size: 4rem; color: white;"></ion-icon>
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 300px; height: 300px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); overflow: hidden;">
+                    <img src="IMÀGENES/locti-innovation.jpg" alt="Innovación LOCTI"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
 
@@ -345,9 +348,9 @@
                         errores.</p>
                 </div>
                 <div class="feature-visual glass"
-                    style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%); display: flex; align-items: center; justify-content: center;">
-                    <ion-icon name="shield-checkmark"
-                        style="font-size: 8rem; color: var(--primary); opacity: 0.3;"></ion-icon>
+                    style="padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <img src="IMÀGENES/etica-intro.jpg" alt="Ética en IA"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
                 </div>
             </div>
         </section>
@@ -393,6 +396,11 @@
 
             <div class="tic-intro glass-dark" style="margin-top: 2rem;">
                 <h3><ion-icon name="rocket-outline"></ion-icon> Programas Nacionales</h3>
+                <div
+                    style="margin-bottom: 1.5rem; border-radius: 12px; overflow: hidden; max-width: 50%; margin-left: auto; margin-right: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <img src="IMÀGENES/feature-5.jpg" alt="Programas Nacionales TIC"
+                        style="width: 100%; height: auto; object-fit: cover;">
+                </div>
                 <p><strong>Plan Nacional de Alfabetización Digital (2006):</strong> Los cursos son gratuitos y el
                     software utilizado es libre. Incluye el proyecto de Implantación de Software Libre en la
                     administración pública, apoyado en el Plan Nacional de Migración a Software Libre, la Academia
@@ -408,10 +416,20 @@
                     <p>Transformación profunda en la educación, el trabajo y las relaciones interpersonales, reduciendo
                         barreras geográficas y temporales.</p>
                 </div>
+                <!-- Removed Image from Card -->
                 <div class="tic-item glass-dark">
                     <h3><ion-icon name="hardware-chip-outline"></ion-icon> Iniciativa y Recursos</h3>
                     <p>Fomento de infraestructura nacional (satélites, fibra óptica) y desarrollo de hardware libre para
                         la independencia tecnológica.</p>
+                </div>
+                <div class="tic-item glass-dark">
+                    <h3>
+                        <img src="IMÀGENES/pnf-logo.jpg" alt="PNF"
+                            style="height: 1.2em; vertical-align: middle; margin-right: 0.5rem; border-radius: 4px;">
+                        Oportunidades de Estudio
+                    </h3>
+                    <p><strong>PNF en Informática:</strong> Formación integral basada en el Plan Nacional de Desarrollo,
+                        garantizando la soberanía tecnológica.</p>
                 </div>
                 <div class="tic-item glass-dark">
                     <h3><ion-icon name="trending-up-outline"></ion-icon> Beneficios Económicos y Sociales</h3>
@@ -470,7 +488,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Blog de Innovación Tecnológica Venezolana.</p>
+        <div class="footer-content" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+            <img src="IMÀGENES/icon-extra.jpg" alt="Logo Footer"
+                style="height: 30px; border-radius: 4px; vertical-align: middle;">
+            <p style="margin: 0;">&copy; 2026 Blog de Innovación Tecnológica Venezolana.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

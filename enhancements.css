@@ -92,3 +92,33 @@ html {
         font-size: 1.4rem;
     }
 }
+
+/* GLOBAL TEXT SAFETY */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Prevent Flex/Grid overflow */
+.card,
+.tic-item,
+.glass,
+.glass-dark {
+    min-width: 0;
+    /* Allow shrinking below content size */
+}
+
+/* Ensure images never overflow containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
